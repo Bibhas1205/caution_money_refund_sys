@@ -1,0 +1,310 @@
+:root {
+    --body-bg-color: #dce4e3;
+    --violet: #6d18c2;
+    --light-violet: #bea1f4;
+    --light-grey: #dce4e3;
+    --text-color: #1288ac;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+	
+	background-color: #e6f2ff;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)90%), url(../assets/images/IMG20200814120805.jpg);
+    background-size: cover;
+    }
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    gap: 10px;
+	opacity:0.93;
+	
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 100vh;
+    background-color:rgb(190, 204, 249);
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1rem;
+    padding: 15px;
+    gap: 15px;
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    background-color: var(--light-violet) !important;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.icon-logout {
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.icon-logout:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+
+.logout-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-violet);
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 10px;
+}
+
+.logout-container #logout-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+#user-container {
+    display: flex;
+    flex-direction: column;
+    gap: -5px;
+}
+
+.progressbar-container {
+    position: absolute;
+    width: 800px;
+    height: 30px;
+    margin: 70px 270px;
+    display: flex;
+    align-items: center;
+	background-color:white;
+}
+
+.progressbar-container ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.progressbar-container ul li {
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.537);
+    text-align: center;
+    padding-top: 5px;
+    width: 100px;
+    flex-basis: 30%;
+    height: 30px;
+    margin: 0.4px;
+}
+
+.progressbar-container ul li div {
+    position: absolute;
+    border: 1px solid rgba(128, 128, 128, 0.537);
+    width: 15px;
+    height: 15px;
+    margin: 1px 12px;
+    border-radius: 50%;
+}
+
+.progressbar-container ul li::before {
+    position: absolute;
+    content: "";
+    background: rgb(238, 232, 232);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+}
+
+.progressbar-container ul li.active::before {
+    background: rgb(53, 168, 44);
+}
+
+.form-container {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.2);
+    border-radius: 10px;
+    margin: 120px 270px;
+    width: 800px;
+    height: 500px;
+	background-color:white;
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+
+    width: 250px;
+    height: 50px;
+}
+
+.btn-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-wrapper button {
+    border: none;
+    height: 30px;
+    width: 100px;
+    background: rgb(185, 207, 241);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-wrapper button:hover {
+    background: rgb(123, 123, 231);
+    cursor: pointer;
+}
+
+.btn-wrapper.form1 {
+    justify-content: end;
+}
+
+.form-wrapper {
+    position: relative;
+    height: 400px;
+    margin: 5px;
+}
+
+.form-wrapper form h5 {
+    position: relative;
+    margin: 25px;
+    font-size: 14px;
+}
+
+.form-wrapper .input-wrap {
+    position: relative;
+    margin: 25px;
+    width: 800px;
+    display: flex;
+}
+
+.form-wrapper .input-wrap div {
+    position: relative;
+    margin-right: 40px;
+}
+
+.form-wrapper .input-wrap div label {
+    position: relative;
+    font-size: 13px;
+    bottom: 5px;
+}
+
+.form-wrapper .input-wrap div span {
+    color: red;
+}
+
+.form-wrapper .input-wrap div input {
+    position: relative;
+    height: 25px;
+    width: 200px;
+    border: 1px solid rgba(128, 128, 128, 0.332);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.form-wrapper .input-wrap div label:hover {
+    cursor: pointer;
+}
+
+.form-wrapper .input-wrap div input:focus {
+    outline: 1px solid rgb(0, 202, 0);
+}
+
+.form-wrapper form .input-wrap div select {
+    position: relative;
+    height: 25px;
+    width: 200px;
+    border: 1px solid rgba(128, 128, 128, 0.332);
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.form-wrapper .input-wrap.form1-line2 div #email {
+    width: 300px;
+}
+
+.form-wrapper .input-wrap.form1-line4 div #add {
+    width: 440px;
+}
+
+.form-wrapper #form3 .input-wrap div input {
+    width: 300px;
+}
+
+.form-wrapper #form2 .input-wrap div select {
+    position: relative;
+    height: 25px;
+    width: 200px;
+    border: 1px solid rgba(128, 128, 128, 0.332);
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.form-wrapper #form2 .input-wrap div select:focus {
+    outline: 1px solid rgb(0, 202, 0);
+}
+
+.form-container .form-wrapper #form4 div input {
+    width: 300px;
+    height: 33px;
+}
+
+#session{
+	display:flex;
+}

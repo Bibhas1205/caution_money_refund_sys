@@ -1,0 +1,464 @@
+:root {
+    --body-bg-color: #dce4e3;
+    --violet: #6d18c2;
+    --light-violet: #bea1f4;
+    --light-grey: #dce4e3;
+    --text-color: #1288ac;
+}
+
+body {
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 100vh;
+    background-color: rgb(190, 204, 249);
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    z-index: 0;
+}
+
+.active {
+    box-shadow: 0px 0px 5px 2px grey;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1rem;
+    padding: 15px;
+    gap: 15px;
+    transition: all 0.3s;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 10px;
+    transition: all 0.2s;
+}
+
+.icon:hover {
+    background-color: var(--light-grey) !important;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+
+.icon-logout {
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.icon-logout:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+.left-bottom{width:100%;}
+
+.profile{
+	width: 45px;
+    height: 45px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+    border-radius: 50%;
+	}
+	
+.profile_img_min{width:100%;height:100%;border-radius:50%;}
+
+.logout-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-violet);
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 10px;
+}
+
+.logout-container #logout-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.dashboard {
+    position: relative;
+    z-index: -1;
+    width: 81vw;
+    height: 90px;
+    margin: 16px 150px;
+}
+
+.dashboard .info-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.dashboard .info-list li {
+    border-radius: 10px;
+    flex-basis: 22%;
+    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.378);
+	background-color: rgb(236,236,236);
+}
+
+.dashboard .info-list li .icons {
+    /*border: 1px solid rgba(128, 128, 128, 0.301);*/
+    position: absolute;
+    margin: 23px;
+    width: 40px;
+    height: 40px;
+    /*border-radius: 50%;*/
+}
+
+.dashboard .info-list li .pannel-info {
+    position: absolute;
+    width: 100px;
+    margin: 22px 80px;
+    color: black;
+    font-size: 15px;
+}
+
+.dashboard .info-list li #count {
+    position: absolute;
+    bottom: 0;
+    margin: 27px 80px;
+    font-size: 14px;
+    color: grey;
+}
+
+.user_table {
+    border: 1px solid grey;
+    position: absolute;
+    width: 81vw;
+    margin-left: 150px;
+    border-radius: 7px;
+    padding: 5px 10px;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    box-shadow: 0px 0px 3px 1px rgba(128, 128, 128, 0.223);
+    z-index: -1;
+}
+
+.user_table .head {
+    height: 10px;
+}
+
+.user_table .head td::before {
+    position: absolute;
+    content: " ";
+    background: rgb(80, 78, 78, 0.1);
+    width: 100%;
+    height: 0.5px;
+    left: 0;
+    top: 38px;
+}
+
+.user_table .rows td span img {
+    width: 15px;
+    position: relative;
+}
+
+.user_table .rows {
+    height: 30px;
+}
+
+.user_table .rows td .optn-btn {
+    position: relative;
+    left: -5px;
+    width: 22px;
+    height: 22px;
+    margin: 3px;
+    color: white;
+    border-radius: 5px;
+    border: white;
+    background: rgb(155, 119, 247);
+    transition: all 0.3s;
+}
+
+.user_table .rows td .optn-btn img {
+    width: 10px;
+    transform: scale(1.5)
+
+}
+
+.user_table .rows td .optn-btn:hover {
+    /* border: 1px solid rgb(140, 0, 255); */
+    box-shadow: 0px 0px 1.5px 1px rgb(140, 0, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.user_table .rows td .act-btn {
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: none;
+    color: white;
+    background: rgb(155, 119, 247);
+	margin:2px;
+}
+
+.user_table .rows td .act-btn:hover {
+    box-shadow: 0px 0px 1.5px 1px rgb(140, 0, 255);
+    cursor: pointer;
+    transform: scale(1.02);
+	
+	/*cursor: not-allowed;
+	background-color: rgb(180, 180,180);
+    transform: scale(0.99);*/
+}
+
+.rows_complete{background-color:lightblue;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+.rows_demote{background-color:rgb(255,102,102);box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+.rows_forwarding{background-color:lightgreen;box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+
+
+
+.application_logo{position:absolute;top:0;left:0;width:100%;height:65px;display:none;}
+/*
+.pop_up{
+	width:50%;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	border:none;
+	border-radius:10px;
+	justify-content: center;
+	background: rgb(155, 119, 247);
+    transition: all 0.3s;
+	background: rgb(228, 228, 228);
+	box-shadow: 0px 0px 5px rgb(164, 164, 164);
+	padding:10px;
+	opacity:1;
+	z-index:2;
+	display:none;
+}*/
+.pop_up{
+	width:50%;
+	position:fixed;
+	height:auto;
+	margin-left:25%;
+	border:none;
+	border-radius:10px;
+	justify-content: center;
+	background: rgb(155, 119, 247);
+    transition: all 0.3s;
+	background: rgb(228, 228, 228);
+	box-shadow: 0px 0px 5px rgb(164, 164, 164);
+	padding:8px;
+	opacity:1;
+	z-index:2;
+	display:none;
+}
+
+
+.close{
+  float:right;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  cursor: pointer;
+}
+
+/* those css is for search pop up */
+.pop_up form table{
+		border-spacing: 10px;
+		width:100%;
+		}
+.pop_up #search_pop_up table td input,select{
+		width:100%;
+		height:30px;
+		font-size:20px;
+		border-radius:10px;
+		border:none;
+		text-align:center;
+		}
+.pop_up #search_pop_up table td .search_but{
+	width:40%;
+	background-color:green;
+	color:white;
+	box-shadow: 0px 0px 5px rgb(164, 164, 164);
+}
+.pop_up #search_pop_up table td .search_but:hover{
+	background-color:grey;
+	color:black;
+}
+/*Here is the end */
+
+/*Here is the settings pop up*/
+	.setting_pop_up{display:block;}
+
+	.pop_up .setting_pop_up{width:100%;}
+	.pop_up .setting_pop_up tr td {width:100%;padding-left:10px;}
+	
+    .switch {
+      position: relative;
+      display: block;
+      vertical-align: top;
+      width: 100px;
+      height: 30px;
+      margin: 10px 10px 10px 0;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+      border-radius: 18px;
+      box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+    .switch-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .switch-label {
+      position: relative;
+      display: block;
+      height: inherit;
+      font-size: 10px;
+      text-transform: uppercase;
+      background: #eceeef;
+      border-radius: inherit;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    }
+    .switch-label:before, .switch-label:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -.5em;
+      line-height: 1;
+      -webkit-transition: inherit;
+      -moz-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit;
+    }
+    .switch-label:before {
+      content: attr(data-off);
+      right: 11px;
+      color: #aaaaaa;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    }
+    .switch-label:after {
+      content: attr(data-on);
+      left: 11px;
+      color: #FFFFFF;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+    }
+    .switch-input:checked ~ .switch-label {background: #E1B42B;box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);}
+    .switch-input:checked ~ .switch-label:before {opacity: 0;}
+    .switch-input:checked ~ .switch-label:after {opacity: 1;}
+    .switch-handle {
+      position: absolute;
+      top: 0px;
+      left: 4px;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+      background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+      border-radius: 100%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .switch-handle:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -6px 0 0 -6px;
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+      background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+      border-radius: 6px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+	  }.switch-input:checked ~ .switch-handle {left: 74px;box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);}
+    .switch-label, .switch-handle {transition: All 0.3s ease;-webkit-transition: All 0.3s ease;-moz-transition: All 0.3s ease;-o-transition: All 0.3s ease;}
+    
+/*End of Settings*/
+
+/*Here Client profile*/
+.profile_pop_up{display:none;}
+.profile_pop_up table{width:100%;}
+.profile_pop_up table tr td img{width:100px;height:100px;padding:10px;border:none;border-radius:50%;}
+
+
+.setting_pop_up tr td{padding:2px;border:none;}
+.setting_pop_up tr td input{width:100%;padding:10px;border:none;border-radius:5px;width:250px;}
+.setting_pop_up tr td input[type="submit"]{width:100%;padding:10px;border:none;border-radius:5px;background-color:green;color:white;width:250px;}
+.setting_pop_up tr td input[type="submit"]:hover{background-color:grey;color:black;}
+
+.profile_hide,.profile_hide_pic,.details_hide{display:none;}
+/* Here ends*/
+
+
+.last_col select {width:100px;}
+.last_col select opption {border:none;}
+
+.new_row{
+	border:none;
+	padding:20px;
+	border-radius:5px;
+	background: rgb(230,230,230);*/
+	box-shadow: box-shadow: 0px 0px 5px rgb(164, 164, 164);
+	width:100%;
+	font-size:12px;
+}
+.new_row a{
+	text-decoration:none;
+	color:blue;
+	}
+.new_row a:hover{
+	color:green;
+}
+
+
+.rows input[type='text']{
+	padding:5px;
+	border:1px solid gray;
+	border-radius:5px;
+	color:red;
+	width:55px;
+	outline:none;
+}

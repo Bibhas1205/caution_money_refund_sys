@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#left {
+  flex: 1;
+  background-color: white;
+}
+
+#right {
+  flex: 1;
+  background: rgba(181.3, 164.57, 255, 1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: 20%;
+  /*margin-top: 10%;*/
+}
+
+input[type="email"],input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  width: 80%;
+  height: 20px;
+}
+
+input[type="submit"] {
+  background: rgba(148.56, 112.62, 252.88, 1);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: none;
+  width: 30%;
+  align-items: left;
+}
+input[type="submit"]:hover {
+	background-color: green;
+    cursor: pointer;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
+p {
+  font-size: 13px;
+}
+
+p[class="or"] {
+  font-size: 15px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+i[ class="fa-regular fa-circle-check"] {
+  font-size: 10px;
+  margin-right: 5px;
+
+}
+
+i[class="fa-solid fa-lock"] {
+  font-size: 12px;
+  margin-right: 5px;
+  color: blue;
+}
+
+.loader{
+	display:flex;
+}
+.loader img{
+width:150px;
+hight:20px;
+display:none;
+}
+
+.back-img {
+    /* border: 1px solid; */
+    height: 100%;
+    background: rgb(34, 70, 195);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2)100%), url(../assets/images/IMG20200814120805.jpg);
+    background-size: cover;
+}
+
+.back-img span img{
+    width: 150px;
+}
