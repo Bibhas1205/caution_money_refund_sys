@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /profile.php
+Disallow: /registration.php
+Disallow: /cashier.php
+Disallow: /faculty.php
+Disallow: /css/*
+Disallow: /script/*
+Disallow: /php/*
+Disallow: /assets/photos/*
+Disallow: /assets/images/*
+
+Sitemap: http://daitm.org.in/sitemap.xml

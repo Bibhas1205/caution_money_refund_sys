@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page | Caution Money Reufund sys</title>
+  <link rel="icon" href="assets/images/daitm.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      margin: 0;
+      padding: 0;
+	  font-size:13px;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 20px 20px;
+      background-color: #33b5e5;
+      color: #fff;
+    }
+    
+    h1 {
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    
+    .subheading {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    
+    .logo {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+    
+    .button-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #33b5e5;
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .button:hover {
+      background-color: #0099cc;
+    }
+    
+    .button-container:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+	
+	
+	.footer {
+      background-color: #e6f2ff;
+      padding: 20px 0;
+	  position:absolute;
+	  bottom:0;
+	  margin-left:36%;
+    }
+    
+    .footer-links {
+      margin: 10px 0;
+    }
+    
+    .footer-links a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+	
+	 .list-container {
+      max-width: 80vw;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    li:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #008000;
+      border-radius: 50%;
+    }
+    
+    p {
+      margin: 0;
+      padding-left: 15px;
+    }
+	
+	.time{
+		position:absolute;
+		margin-left:10px;
+		margin-top:10px;
+		color:#33b5e5;
+		font-size:20px;
+	}
+	.device{
+		position:relative;
+		float:right;
+		margin-right:10px;
+		margin-top:10px;
+		color:#33b5e5;
+		font-size:20px;}
+	
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>CAUTION MONEY REFUND SYSTEM</h1>
+    <p class="subheading">Dinabandhu Andrews Institute of Technology and Management</p>
+    <img class="logo" src="assets/images/application_logo.png" alt="Logo">
+  </div>
+<span class="time">Time : 10:00</span>
+<span class="device">Device : Windows</span>
+  <div class="button-container">
+    <a class="button" href="faculty_login.php">Faculty Zone</a>
+    <a class="button" href="student_login.php">Student Zone</a>
+  </div>
+
+  <!-- Include JavaScript code if needed -->
+  <div class="list-container">
+    <h3>Requirements</h3>
+    <ul>
+      <li><p>Users need to sign up with their valid email address and a custom password. When a student wants to sign up, they need to provide their university roll number as well.</p></li>
+      <li><p>An email can be used to register only one user.</p></li>
+      <li><p>If a user forgets their password, they can utilize the "Forgot Password" feature.</p></li>
+      <li><p>After signing up, students need to submit documents such as personal details, bank details with a photo of their bank passbook, grade card, and degree certificate or registration certificate.</p></li>
+      <li><p>This website is trustworthy and secure.</p></li>
+    </ul>
+  </div>
+
+	 <footer class="footer">
+    <div class="footer-links">
+	  <script>document.write('&copy; ' + new Date().getFullYear() + ' DAITM. All rights reserved.');</script>
+      <a href="about.html">About Us</a>
+      <a href="documentation.html">Documentation</a>
+    </div>
+  </footer>
+  
+  <script src="script/ajax.js"></script>
+<script>  
+//this block is for Clock on the top-right side	
+function time()
+{
+	var date = new Date();
+	var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+	var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+	var date_time ="Datetime : "+ current_date+" "+current_time;
+	$('.time').html(date_time);
+}
+setInterval('time()',100);
+
+time();
+
+
+$.ajax({
+			type: "POST",
+			url: "php/homepage.php",
+			processData: false,
+			contentType: false,
+			cache: false,
+			}).success(function (data){
+				$(".device").html(data);
+			});
+
+
+</script>
+
+</body>
+</html>
